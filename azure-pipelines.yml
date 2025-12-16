@@ -13,6 +13,18 @@ stages:
     displayName: plan
 
     jobs:
-      - job: 
+      - job: init
+        displayName: init
+        steps:
+        
+        - task: TerraformTask@5
+          displayName: init
+          inputs:
+            provider: 'azurerm'
+            command: 'init'
+            backendServiceArm: 'Azure subscription 1(fe06a0e7-54dc-4c6b-8a8c-7ddf810abb4e)'
+            backendAzureRmStorageAccountName: 'ashishstorage07'
+            backendAzureRmContainerName: 'state'
+            backendAzureRmKey: 'state.tfstate'
         
 
