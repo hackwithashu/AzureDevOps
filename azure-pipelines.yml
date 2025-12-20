@@ -6,7 +6,7 @@
 trigger: none
 
 pool:
-  vmImage: Hosted Agent
+  name: Self-hosted
 
 stages:
   - stage: terraform_plan
