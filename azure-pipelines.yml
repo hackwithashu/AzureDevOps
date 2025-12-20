@@ -38,6 +38,12 @@ stages:
             command: 'plan'
             environmentServiceNameAzureRM: 'Azure subscription 1(fe06a0e7-54dc-4c6b-8a8c-7ddf810abb4e)'
 
+        - task: TerraformTask@5
+          inputs:
+            provider: 'azurerm'
+            command: 'apply'
+            environmentServiceNameAzureRM: 'Azure subscription 1(fe06a0e7-54dc-4c6b-8a8c-7ddf810abb4e)'
+
 
   
         
