@@ -33,6 +33,7 @@ stages:
 
       - job: 
         displayName: plan
+        dependsOn: init
         steps:
         - task: TerraformTask@5
           inputs:
